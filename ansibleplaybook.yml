@@ -1,14 +1,14 @@
 ### Made by Guillermo Zaandam
 
-### ansible-playbook -i 192.168.122.194, ansibleplaybook.yml --ask-become-pass
+### Command 1: 'ansible-playbook -i 192.168.122.194, ansibleplaybook.yml --ask-become-pass'
+### Command 2: 'ansible-playbook  ansibleplaybook.yml --ask-become-pass'
+
+### command 2 is default for this playbook and you can use it directly to install and configure the software.
 
 
 - name: My first play
-  hosts: localhost
+  hosts: localhost #all # "'all' is used for testing this playbook delete 'localhost' and change it to 'all' and use command 1 and change the ip address to test this playbook."
   become: yes
-  # vars:
-  #   - username: guillermo
-  #   - home: /home/guillermo
 
   tasks:
      - name: Update apt cache
@@ -60,6 +60,8 @@
            - mosh
            - autokey-gtk
            - aria2
+           - asciinema
+           - ttyrec
          state: present
        become: yes
 
@@ -81,19 +83,11 @@
          state: present
        become: yes
  
-     - name: Add current user to libvirt group
-       user:
-         name: "{{ ansible_user }}"
-         groups: libvirt, libvirt-qemu
-         append: yes
-       become: yes
-      
-
      - name: Download .deb Package
        get_url:
          url: "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64" #"URL_TO_YOUR_DEB_PACKAGE"
          dest: "/tmp/code_1.81.1-1691620686_amd64"  # Destination path on the remote server # mostly the tmp folder. 
-         
+
      - name: Install .deb Package
        apt:
          deb: "/tmp/code_1.81.1-1691620686_amd64"
