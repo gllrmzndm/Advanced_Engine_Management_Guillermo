@@ -62,6 +62,7 @@
            - aria2
            - asciinema
            - ttyrec
+           - nodejs
          state: present
        become: yes
 

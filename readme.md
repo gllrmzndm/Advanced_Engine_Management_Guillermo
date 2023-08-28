@@ -4,7 +4,13 @@
 
 Provisioning software, configuring and deploying applications using Ansible.
 
-# One
+---
+
+<p align="center">
+  <img width="600" src="ascii.svg">
+</p>
+
+---
 
 ```
 sudo apt update -y && sudo apt upgrade -y
@@ -19,4 +25,4 @@ ansible-playbook  ansibleplaybook.yml --ask-become-pass
 
 ```
 
-[![asciicast](https://asciinema.org/a/R1R8v3AZDQpYleuKotJ2rLDte.svg)](https://asciinema.org/a/R1R8v3AZDQpYleuKotJ2rLDte)
+---
