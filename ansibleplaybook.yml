@@ -88,13 +88,13 @@
          append: yes
        become: yes
       
-  tasks:
-      - name: Download .deb Package
-        get_url:
-          url: "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64" #"URL_TO_YOUR_DEB_PACKAGE"
-          dest: "/tmp/code_1.81.1-1691620686_amd64"  # Destination path on the remote server # mostly the tmp folder.
 
-      - name: Install .deb Package
-        apt:
-          deb: "/tmp/code_1.81.1-1691620686_amd64"
-          state: present  # This ensures the package is installed # mostly the tmp folder.
+     - name: Download .deb Package
+       get_url:
+         url: "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64" #"URL_TO_YOUR_DEB_PACKAGE"
+         dest: "/tmp/code_1.81.1-1691620686_amd64"  # Destination path on the remote server # mostly the tmp folder. 
+         
+     - name: Install .deb Package
+       apt:
+         deb: "/tmp/code_1.81.1-1691620686_amd64"
+         state: present  # This ensures the package is installed # mostly the tmp folder.
