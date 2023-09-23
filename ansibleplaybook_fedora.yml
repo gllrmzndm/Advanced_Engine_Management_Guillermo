@@ -1,0 +1,73 @@
+### Made by Guillermo Zaandam
+
+### Command 1: 'ansible-playbook -i 192.168.122.194, ansibleplaybook.yml --ask-become-pass'
+### Command 2: 'ansible-playbook  ansibleplaybook.yml --ask-become-pass'
+
+### command 2 is default for this playbook and you can use it directly to install and configure the software.
+
+---
+- name: My first play
+  hosts: all ## change to all for testing to other server otherwise use "localhost"
+  become: true
+
+  tasks:
+    - name: "Install required packages"
+      ansible.builtin.dnf:
+        name:
+          - python3.8
+          - gnupg2
+          - pass
+          - shellcheck
+          - elinks
+          - autossh
+          - surfraw
+          - googler
+          - jpegoptim
+          - ffmpeg-free
+          - thunderbird
+          - gimp
+          - scribus
+          - krita
+          - darktable
+          - graphviz
+          - peek
+          - gnome-firmware
+          - remmina
+          - transmission
+          - ansible
+          - tlp
+          - tlp-rdw
+          - dislocker
+          - neovim
+          - mosh
+          - autokey-gtk
+          - aria2
+          - asciinema
+          - nodejs
+        state: present
+
+    - name: "Install virt-manager and libguestfs-tools"
+      ansible.builtin.dnf:
+        name:
+          - virt-manager
+          - libguestfs-tools
+        state: present
+
+    - name: "Install qemu, qemu-kvm, and bridge-utils"
+      ansible.builtin.dnf:
+        name:
+          - qemu
+          - qemu-kvm
+          - bridge-utils
+        state: present
+
+    - name: "Download .rpm Package"
+      ansible.builtin.get_url:
+        url: "https://code.visualstudio.com/sha/download?build=stable&os=linux-rpm-x64"
+        dest: "/tmp/code-1.81.1-1691620686.x86_64.rpm"
+        mode: "0600"
+
+    - name: "Install .rpm Package"
+      ansible.builtin.dnf:
+        name: "/tmp/code-1.81.1-1691620686.x86_64.rpm"
+        state: present
