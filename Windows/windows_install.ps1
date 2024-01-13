@@ -37,7 +37,8 @@ $packages = @(
     "WinCompose",
     "sublimetext3",
     "obsidian",
-    "googler"
+    "googler",
+    "handbrake"
 )
 foreach ($package in $packages) {
     choco install $package -y
