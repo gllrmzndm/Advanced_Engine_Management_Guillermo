@@ -43,6 +43,7 @@ $packages = @(
     "boxstarter.hyperv",
     "yt-dlp",
     "everything"
+    "visualcpp-build-tools"
 )
 foreach ($package in $packages) {
     choco install $package -y
