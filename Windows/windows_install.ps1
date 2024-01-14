@@ -13,7 +13,6 @@ $packages = @(
     "dotnet-6.0-desktopruntime",
     "dotnet-desktopruntime",
     "DotNet4.5.2",
-    "Everything",
     "figma",
     "Firefox",
     "flow-launcher",
@@ -38,7 +37,12 @@ $packages = @(
     "sublimetext3",
     "obsidian",
     "googler",
-    "handbrake"
+    "handbrake",
+    "googlechrome.dev",
+    "boxstarter",
+    "boxstarter.hyperv",
+    "yt-dlp",
+    "everything"
 )
 foreach ($package in $packages) {
     choco install $package -y
