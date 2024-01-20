@@ -60,6 +60,9 @@
           - guake
           - gpick
           - rsync
+          - flameshot
+          - yaru-theme
+          
         state: present
 
     - name: "Install virt-manager and libguestfs-tools"
