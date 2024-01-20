@@ -7,7 +7,7 @@
 
 ---
 - name: My first play
-  hosts: all ## change to all for testing to other server otherwise use "localhost"
+  hosts: localhost ## change to all for testing to other server otherwise use "localhost"
   become: true
 
   tasks:
@@ -44,6 +44,23 @@
           - aria2
           - asciinema
           - nodejs
+          - git
+          - gnome-documents
+          - deja-dup
+          - flat-remix-icon-theme
+          - toolbox
+          - gnome-tweaks
+          - gnome-extensions-app.x86_64
+          - gnome-shell-extension-openweather
+          - gnome-shell-extension-gsconnect
+          - gnome-shell-extension-dash-to-dock
+          - lollypop
+          - webextension-gsconnect.x86_64
+          - intel-media-driver
+          - setools-console
+          - wireshark
+          - guake
+          - gpick
         state: present
 
     - name: "Install virt-manager and libguestfs-tools"
