@@ -45,7 +45,6 @@
           - asciinema
           - nodejs
           - git
-          - gnome-documents
           - deja-dup
           - flat-remix-icon-theme
           - toolbox
@@ -56,7 +55,6 @@
           - gnome-shell-extension-dash-to-dock
           - lollypop
           - webextension-gsconnect.x86_64
-          - intel-media-driver
           - setools-console
           - wireshark
           - guake
