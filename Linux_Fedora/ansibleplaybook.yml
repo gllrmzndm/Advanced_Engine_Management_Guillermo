@@ -61,6 +61,7 @@
           - wireshark
           - guake
           - gpick
+          - rsync
         state: present
 
     - name: "Install virt-manager and libguestfs-tools"
