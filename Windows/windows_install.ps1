@@ -30,10 +30,7 @@ $packages = @(
     "rpi-imager",
     "rsync",
     "rufus",
-    "ueli",
-    "vagrant",
     "Visual Studio Code",
-    "WinCompose",
     "sublimetext3",
     "obsidian",
     "googler",
@@ -43,6 +40,10 @@ $packages = @(
     "boxstarter.hyperv",
     "yt-dlp",
     "everything"
+    "visualcpp-build-tools"
+    "rufus"
+    "rsync"
+    
 )
 foreach ($package in $packages) {
     choco install $package -y
