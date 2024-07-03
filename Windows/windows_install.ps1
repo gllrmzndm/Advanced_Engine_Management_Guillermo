@@ -43,6 +43,7 @@ $packages = @(
     "visualcpp-build-tools"
     "rufus"
     "rsync"
+    "ventoy"
     
 )
 foreach ($package in $packages) {
