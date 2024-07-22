@@ -42,7 +42,7 @@ $packages = @(
     "visualcpp-build-tools",
     "rufus",
     "rsync",
-    "ventoy",
+    "ventoy"
     
 )
 foreach ($package in $packages) {
@@ -52,3 +52,8 @@ foreach ($package in $packages) {
 winget install youtorrent
 winget install scoop
 winget install "openssh beta"
+winget install --id Microsoft.Powershell --source winget
+wsl --install
+
+# https://learn.microsoft.com/en-us/windows/wsl/install
+# https://learn.microsoft.com/en-gb/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.4#install-powershell-using-winget-recommended
