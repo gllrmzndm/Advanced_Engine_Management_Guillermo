@@ -39,11 +39,10 @@ $packages = @(
     "boxstarter",
     "boxstarter.hyperv",
     "yt-dlp",
-    "everything"
-    "visualcpp-build-tools"
-    "rufus"
-    "rsync"
-    "ventoy"
+    "visualcpp-build-tools",
+    "rufus",
+    "rsync",
+    "ventoy",
     
 )
 foreach ($package in $packages) {
@@ -52,3 +51,4 @@ foreach ($package in $packages) {
 
 winget install youtorrent
 winget install scoop
+winget install "openssh beta"
