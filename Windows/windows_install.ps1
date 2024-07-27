@@ -43,7 +43,10 @@ $packages = @(
     "rufus",
     "rsync",
     "ventoy",
-    "tabby"
+    "tabby",
+    "sysinternals",
+    "microsoft-hyper-v-all -source windowsfeatures",
+    "Microsoft-Windows-Subsystem-Linux -source windowsfeatures"
     
 )
 foreach ($package in $packages) {
