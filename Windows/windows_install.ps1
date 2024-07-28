@@ -45,6 +45,7 @@ $packages = @(
     "ventoy",
     "tabby",
     "sysinternals",
+    "thunderbird",
     "microsoft-hyper-v-all -source windowsfeatures",
     "Microsoft-Windows-Subsystem-Linux -source windowsfeatures"
     
